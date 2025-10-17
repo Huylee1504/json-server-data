@@ -1,0 +1,144 @@
+/* ===== RESET ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+/* ===== HEADER ===== */
+.admin-header {
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  font-size: 20px;
+}
+.header-left i { margin-right: 10px; }
+#logoutBtn {
+  background: #dc3545;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.logo {
+  background: url("img/Group.png") no-repeat center;
+  background-size: contain;
+  width: 150px;
+  height: 60px;
+}
+
+/* ===== NAV ===== */
+.admin-nav {
+  background: #e9f5ee;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 2px solid #198754;
+}
+.admin-nav button {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.admin-nav button.active {
+  background: #145c35;
+}
+
+/* ===== MAIN ===== */
+.admin-container {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section-header h2 {
+  color: #198754;
+}
+.add-btn {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.table-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background: #198754;
+  color: white;
+  padding: 10px;
+}
+td {
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  padding: 10px;
+}
+td img {
+  width: 50px;
+  border-radius: 6px;
+}
+.actions button {
+  border: none;
+  padding: 6px 10px;
+  margin: 0 3px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button.edit { background: #0d6efd; color: white; }
+button.delete { background: #dc3545; color: white; }
+
+.tab { display: none; }
+.tab.active { display: block; }
+
+/* ===== MODAL ===== */
+#modal.hidden { display: none; }
+#modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.modal-content button {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Quản lý hệ thống</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="admin-header">
+    <div class="header-left">
+      <div class="logo"></div>
+      <h1>Quản trị hệ thống</h1>
+    </div>
+    <div class="header-right">
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</button>
+    </div>
+  </header>
+
+  <nav class="admin-nav">
+    <button data-tab="products" class="active">📦 Quản lý sản phẩm</button>
+    <button data-tab="users">👤 Quản lý người dùng</button>
+  </nav>
+
+  <main class="admin-container">
+    <!-- ===== QUẢN LÝ SẢN PHẨM ===== -->
+    <section id="tab-products" class="tab active">
+      <div class="section-header">
+        <h2>Danh sách sản phẩm</h2>
+        <button id="addProductBtn" class="add-btn"><i class="fa-solid fa-plus"></i> Thêm sản phẩm</button>
+      </div>
+      <div class="table-card">
+        <table id="productTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên</th>
+              <th>Giá</th>
+              <th>Danh mục</th>
+              <th>Ảnh</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== QUẢN LÝ NGƯỜI DÙNG ===== -->
+    <section id="tab-users" class="tab">
+      <div class="section-header">
+        <h2>Danh sách người dùng</h2>
+        <button id="addUserBtn" class="add-btn"><i class="fa-solid fa-plus"></i> Thêm người dùng</button>
+      </div>
+      <div class="table-card">
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên</th>
+              <th>Email</th>
+              <th>Điện thoại</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+      <h3 id="modalTitle"></h3>
+      <form id="modalForm"></form>
+    </div>
+  </div>
+  <div id="modal" class="hidden">
+    <div id="modalForm"></div>
+    <button id="closeModalBtn">Đóng</button>
+  </div>
+
+  <script src="main1.js"></script>
+</body>
+
+</html>
